@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Hall Rail Logistics — Texas Railyard Operations</title>
 <meta name="description" content="Hall Rail Logistics operates and manages major railyards across Texas — switching, storage, transloading, and fleet logistics built for heavy industry." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0e13'/%3E%3Cg stroke='%23f26a21' stroke-width='2.5'%3E%3Cline x1='11' y1='5' x2='11' y2='27'/%3E%3Cline x1='21' y1='5' x2='21' y2='27'/%3E%3C/g%3E%3Cg stroke='%235b86a8' stroke-width='2'%3E%3Cline x1='8' y1='9' x2='24' y2='9'/%3E%3Cline x1='8' y1='16' x2='24' y2='16'/%3E%3Cline x1='8' y1='23' x2='24' y2='23'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" href="logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Roboto+Slab:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
     --bg:#0b0e13; --bg-2:#0d1219; --panel:#131a24; --panel-2:#182130;
     --line:#232d3b; --line-2:#2d3a4c;
     --text:#eef2f7; --muted:#96a4b5; --muted-2:#6f7e90;
-    --accent:#f26a21; --accent-2:#ff8a4c; --accent-soft:rgba(242,106,33,.12);
+    --accent:#ca1a1b; --accent-2:#ee4b4a; --accent-soft:rgba(202,26,27,.14);
     --steel:#5b86a8; --steel-2:#87aecb;
     --display:'Roboto Slab',Georgia,'Times New Roman',serif;
     --body:'Libre Franklin',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
@@ -31,7 +31,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .eyebrow{
     font-family:var(--display); font-size:.78rem; font-weight:600;
-    letter-spacing:.22em; text-transform:uppercase; color:var(--accent);
+    letter-spacing:.22em; text-transform:uppercase; color:var(--accent-2);
     display:inline-flex; align-items:center; gap:10px;
   }
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
@@ -45,7 +45,9 @@
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;letter-spacing:.02em;font-size:1.02rem}
-  .brand .mark{width:34px;height:34px;flex:none}
+  .brand .mark{width:40px;height:40px;flex:none;border-radius:50%;object-fit:cover;border:1px solid var(--line-2)}
+  .hero-badge{position:absolute;right:24px;top:42%;transform:translateY(-50%);width:290px;border-radius:50%;border:1px solid var(--line-2);box-shadow:0 44px 90px -35px rgba(202,26,27,.5)}
+  @media(max-width:1080px){.hero-badge{display:none}}
   .brand small{display:block;font-family:var(--body);font-weight:500;font-size:.62rem;letter-spacing:.28em;color:var(--muted-2);text-transform:uppercase;margin-top:2px}
   .nav-links{display:flex;align-items:center;gap:30px}
   .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;transition:color .2s}
@@ -55,7 +57,7 @@
     padding:12px 22px;border-radius:8px;display:inline-flex;align-items:center;gap:9px;
     cursor:pointer;transition:transform .15s ease, background .2s, box-shadow .2s;border:1px solid transparent;white-space:nowrap;
   }
-  .btn-primary{background:var(--accent);color:#0b0e13;box-shadow:0 8px 24px -8px rgba(242,106,33,.6)}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -8px rgba(202,26,27,.6)}
   .btn-primary:hover{background:var(--accent-2);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--text);border-color:var(--line-2)}
   .btn-ghost:hover{border-color:var(--steel);color:var(--steel-2)}
@@ -67,7 +69,7 @@
   .hero::before{
     content:"";position:absolute;inset:0;z-index:0;
     background:
-      radial-gradient(1100px 520px at 82% -8%, rgba(242,106,33,.14), transparent 60%),
+      radial-gradient(1100px 520px at 82% -8%, rgba(202,26,27,.14), transparent 60%),
       radial-gradient(900px 500px at 8% 12%, rgba(91,134,168,.14), transparent 62%),
       linear-gradient(180deg,#0c1017,#0b0e13 70%);
   }
@@ -80,8 +82,8 @@
   }
   .hero .wrap{position:relative;z-index:1}
   .hero h1{font-size:clamp(2.4rem,6vw,4.35rem);margin:22px 0 0;max-width:16ch}
-  .hero h1 .hl{color:var(--accent)}
-  .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);max-width:60ch;margin:24px 0 0}
+  .hero h1 .hl{color:var(--accent-2)}
+  .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);max-width:52ch;margin:24px 0 0}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
   .hero-badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
   .hero-badges div{font-size:.86rem;color:var(--muted-2);display:flex;align-items:center;gap:9px;font-weight:500}
@@ -110,8 +112,8 @@
   .card::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .25s ease}
   .card:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:0 24px 50px -30px rgba(0,0,0,.8)}
   .card:hover::before{transform:scaleY(1)}
-  .card .ico{width:46px;height:46px;border-radius:10px;background:var(--accent-soft);border:1px solid rgba(242,106,33,.3);display:grid;place-items:center;margin-bottom:20px}
-  .card .ico svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7}
+  .card .ico{width:46px;height:46px;border-radius:10px;background:var(--accent-soft);border:1px solid rgba(202,26,27,.3);display:grid;place-items:center;margin-bottom:20px}
+  .card .ico svg{width:24px;height:24px;stroke:var(--accent-2);fill:none;stroke-width:1.7}
   .card h3{font-size:1.18rem;margin-bottom:10px}
   .card p{color:var(--muted);font-size:.96rem}
 
@@ -120,18 +122,18 @@
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:56px 0}
   .stat{text-align:center;padding:0 12px}
   .stat .num{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,2.8rem);color:var(--text);line-height:1}
-  .stat .num span{color:var(--accent)}
+  .stat .num span{color:var(--accent-2)}
   .stat .lbl{color:var(--muted);font-size:.9rem;margin-top:12px;letter-spacing:.01em}
   .stat + .stat{border-left:1px solid var(--line)}
 
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:340px 1fr;gap:52px;align-items:center;margin-top:12px}
-  .portrait{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line-2);background:linear-gradient(160deg,var(--panel),#0a0d12);aspect-ratio:1/1}
-  .portrait img{width:100%;height:100%;object-fit:cover}
+  .portrait{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line-2);background:linear-gradient(160deg,var(--panel),#0a0d12);aspect-ratio:4/5}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
   .portrait::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -70px 90px -40px rgba(11,14,19,.9);pointer-events:none}
   .portrait.noimg{display:grid;place-items:center}
   .portrait.noimg::before{content:"BH";font-family:var(--display);font-weight:700;font-size:4rem;color:var(--line-2)}
-  .portrait .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .portrait .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2)}
   .about-body h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:16px 0 4px}
   .about-body .role{color:var(--steel-2);font-family:var(--display);font-weight:600;letter-spacing:.04em;margin-bottom:20px}
   .about-body p{color:var(--muted);font-size:1.05rem;margin-bottom:16px}
@@ -139,7 +141,7 @@
 
   /* CONTACT */
   .contact{position:relative;overflow:hidden}
-  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 120%,rgba(242,106,33,.16),transparent 60%)}
+  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 120%,rgba(202,26,27,.16),transparent 60%)}
   .contact .inner{position:relative;text-align:center;border:1px solid var(--line-2);border-radius:20px;background:linear-gradient(180deg,var(--panel),var(--bg-2));padding:64px 32px}
   .contact h2{font-size:clamp(2rem,4.6vw,3rem)}
   .contact p{color:var(--muted);max-width:52ch;margin:18px auto 0;font-size:1.08rem}
@@ -182,11 +184,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Hall Rail Logistics home">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="9" fill="#131a24" stroke="#232d3b"/>
-        <g stroke="#f26a21" stroke-width="2.6"><line x1="14" y1="7" x2="14" y2="33"/><line x1="26" y1="7" x2="26" y2="33"/></g>
-        <g stroke="#5b86a8" stroke-width="2"><line x1="10" y1="12" x2="30" y2="12"/><line x1="10" y1="20" x2="30" y2="20"/><line x1="10" y1="28" x2="30" y2="28"/></g>
-      </svg>
+      <img class="mark" src="logo.png" alt="Hall Rail Logistics logo" />
       <span>HALL RAIL LOGISTICS<small>Texas Railyard Operations</small></span>
     </a>
     <nav class="nav-links" id="navlinks">
@@ -204,6 +202,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
+      <img class="hero-badge" src="logo.png" alt="Hall Rail Logistics badge" />
       <span class="eyebrow reveal">Railyard Operations &nbsp;·&nbsp; Texas</span>
       <h1 class="reveal">Texas railyards, <span class="hl">operated with precision.</span></h1>
       <p class="lead reveal">Hall Rail Logistics runs and manages major rail terminals across Texas — switching, storage, transloading, and fleet logistics — with the safety discipline and throughput heavy industry depends on.</p>
@@ -325,11 +324,7 @@
 <footer>
   <div class="wrap foot-inner">
     <div class="brand">
-      <svg class="mark" width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="9" fill="#131a24" stroke="#232d3b"/>
-        <g stroke="#f26a21" stroke-width="2.6"><line x1="14" y1="7" x2="14" y2="33"/><line x1="26" y1="7" x2="26" y2="33"/></g>
-        <g stroke="#5b86a8" stroke-width="2"><line x1="10" y1="12" x2="30" y2="12"/><line x1="10" y1="20" x2="30" y2="20"/><line x1="10" y1="28" x2="30" y2="28"/></g>
-      </svg>
+      <img class="mark" src="logo.png" alt="" style="width:28px;height:28px" />
       Hall Rail Logistics
     </div>
     <div class="foot-links">
